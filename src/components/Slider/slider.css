@@ -1,0 +1,30 @@
+.swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper .swiper-slide-shadow {
+  background: none;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #f3f4f6;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ece7d5;
+
+  padding: 2rem;
+  border-radius: 50%;
+  border: solid 1px #ece7d5;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
