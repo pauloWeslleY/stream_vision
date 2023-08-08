@@ -1,13 +1,13 @@
 import { memo } from 'react'
 import {
-  Box,
-  Flex,
-  Stack,
+  Container,
   HStack,
+  Stack,
+  Flex,
+  Box,
+  Heading,
   IconButton,
   useDisclosure,
-  Container,
-  Heading,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { ROUTES } from '../../routes/routes'
@@ -38,7 +38,7 @@ const NavBar = () => {
           </HStack>
           <HStack spacing={4} display={{ base: 'none', md: 'flex' }}>
             {ROUTES.map(props => (
-              <NavItem key={props.path} label={props.label} to={props.path} />
+              <NavItem key={props.to} navItem={props} />
             ))}
           </HStack>
         </Flex>
@@ -47,7 +47,7 @@ const NavBar = () => {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {ROUTES.map(props => (
-                <NavItem key={props.path} label={props.label} to={props.path} />
+                <NavItem key={props.to} navItem={props} />
               ))}
             </Stack>
           </Box>

@@ -3,11 +3,16 @@ import { Link as ReactRouterLink, useLocation } from 'react-router-dom'
 import { Link } from '@chakra-ui/react'
 
 interface NavItemProps {
-  to: string
   label: string
+  to: string
 }
 
-const NavItem = ({ label, to }: NavItemProps) => {
+interface NavProps {
+  navItem: NavItemProps
+}
+
+const NavItem = ({ navItem }: NavProps) => {
+  const { label, to } = navItem
   const location = useLocation()
   const isActive = location.pathname === to
 

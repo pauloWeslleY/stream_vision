@@ -1,23 +1,23 @@
 interface IRouterProps {
   label: string
-  path: string
+  to: string
 }
 
 export const ROUTES: Array<IRouterProps> = [
   {
     label: 'Home',
-    path: '/',
+    to: '/',
   },
   {
-    label: 'Service',
-    path: '/service',
+    label: 'Produtos',
+    to: '/service',
   },
   {
-    label: 'About',
-    path: '/about',
+    label: 'Serviços',
+    to: '/about',
   },
   {
-    label: 'Contact',
-    path: '/contact',
+    label: 'Contatos',
+    to: '/contact',
   },
 ]
