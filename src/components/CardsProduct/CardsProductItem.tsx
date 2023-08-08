@@ -10,15 +10,24 @@ export const CardsProductItem = ({ card }: CardsProductItemProps) => {
 
   return (
     <Flex
-      flexBasis={'13rem'}
+      flexBasis={'10rem'}
       flexGrow={1}
       flexShrink={1}
-      flexDir={'column'}
-      shadow={'lg'}
-      rounded={'lg'}
+      shadow={'md'}
+      rounded={'md'}
       overflow={'hidden'}
+      cursor={'pointer'}
     >
-      <Image w={'full'} h={72} fit={'cover'} src={banner} alt={banner} />
+      <Image
+        transform={'scale(1.0)'}
+        objectFit={'cover'}
+        transition={'all 0.3s ease-in-out'}
+        _hover={{
+          transform: 'scale(1.2)',
+        }}
+        src={banner}
+        alt={banner}
+      />
     </Flex>
   )
 }

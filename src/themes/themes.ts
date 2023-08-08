@@ -11,7 +11,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'indigo.100',
+        bg: 'whiteAlpha.100',
         color: 'zinc.700',
         fontFamily: "'Poppins', sans-serif",
       },

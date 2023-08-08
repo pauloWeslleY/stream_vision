@@ -11,9 +11,14 @@ interface CardsProductProps {
 const CardsProduct = ({ title, cards }: CardsProductProps) => {
   return (
     <Container maxW={'6xl'}>
-      <Flex flexDir={'column'} justify={'center'} my={9}>
+      <Flex flexDir={'column'} justify={'center'} my={20}>
         <Stack mb={5}>
-          <Text as={'h2'} fontSize={'4xl'}>
+          <Text
+            as={'h2'}
+            fontSize={'4xl'}
+            fontWeight={'semibold'}
+            color={'zinc.800'}
+          >
             {title}
           </Text>
         </Stack>

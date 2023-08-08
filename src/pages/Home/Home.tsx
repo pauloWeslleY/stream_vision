@@ -1,10 +1,37 @@
+import { useMemo } from 'react'
 import { BannerHero } from '../../components/BannerHero'
 import { CardsProduct } from '../../components/CardsProduct'
+import { CarouselHero } from '../../components/SlideProduct'
+import { PlansPricing } from '../../components/PlansPricing'
+import { BannerPricing } from '../../components/BannerPricing'
 import { CARDS_SLIDER } from '../../components/CardsProduct/data/[cards_props]'
-import { CarouselHero } from '../../components/SlideProduct/CarouselHero'
 import { SLIDER } from '../../components/SlideProduct/data/[slide_props]'
+import SERVICES_LIST from '../../services/servicesList'
+import PLANS from '../../services/plans'
 
 export const Home = () => {
+  const data = useMemo(() => {
+    const response = SERVICES_LIST.map(props => {
+      return {
+        label: props.label,
+      }
+    })
+
+    return response
+  }, [])
+
+  const plans = useMemo(() => {
+    const response = PLANS.map(props => {
+      return {
+        plan: props.plan,
+        price: props.price,
+        month: props.month,
+      }
+    })
+
+    return response
+  }, [])
+
   return (
     <main>
       <header>{SLIDER && <CarouselHero slide={SLIDER} />}</header>
@@ -12,13 +39,16 @@ export const Home = () => {
       <BannerHero
         title="TVBox"
         subtitle="Stream Vision"
-        description="The project board is an exclusive resource for contract work.
-        It's perfect for freelancers, agencies, and moonlighters."
+        description="Netflix, Prime Vídeo, Disney, Globo Play, Canais Abertos e Fechados e muito mais."
         imageUrl="/images/banner.jpg"
       />
 
       <section>
         {CARDS_SLIDER && <CardsProduct title="Produtos" cards={CARDS_SLIDER} />}
+
+        <BannerPricing listService={data} />
+
+        <PlansPricing plansList={plans} />
       </section>
     </main>
   )

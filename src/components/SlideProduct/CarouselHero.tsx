@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Center } from '@chakra-ui/react'
 import { Slide, SliderCarousel, SliderProps } from '../Slider'
 import { SlideType } from '../../@types/SlideType'
@@ -7,7 +8,7 @@ interface CarouselHeroProps {
   slide: SlideType[]
 }
 
-export const CarouselHero = ({ slide }: CarouselHeroProps) => {
+const CarouselHero = ({ slide }: CarouselHeroProps) => {
   const settings: SliderProps = {
     spaceBetween: 30,
     slidesPerView: 1,
@@ -51,3 +52,5 @@ export const CarouselHero = ({ slide }: CarouselHeroProps) => {
     </SliderCarousel>
   )
 }
+
+export default memo(CarouselHero)
