@@ -4,6 +4,7 @@ import { CardsProduct } from '../../components/CardsProduct'
 import { CarouselHero } from '../../components/SlideProduct'
 import { PlansPricing } from '../../components/PlansPricing'
 import { BannerPricing } from '../../components/BannerPricing'
+import { Contact } from '../../components/Contact'
 import { CARDS_SLIDER } from '../../components/CardsProduct/data/[cards_props]'
 import { SLIDER } from '../../components/SlideProduct/data/[slide_props]'
 import SERVICES_LIST from '../../services/servicesList'
@@ -49,6 +50,11 @@ export const Home = () => {
         <BannerPricing listService={data} />
 
         <PlansPricing plansList={plans} />
+
+        <Contact
+          title="Entre em contato"
+          content="Peça já seu serviços de streaming"
+        />
       </section>
     </main>
   )
