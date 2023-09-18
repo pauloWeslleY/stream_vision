@@ -24,6 +24,7 @@ export const Home = () => {
   const plans = useMemo(() => {
     const response = PLANS.map(props => {
       return {
+        id: props.id,
         plan: props.plan,
         price: props.price,
         month: props.month,

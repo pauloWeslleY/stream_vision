@@ -1,4 +1,5 @@
 import { Flex, Box, Text, chakra } from '@chakra-ui/react'
+import { BtnHero } from '../../Button'
 
 interface PlanPricingCardProps {
   plan: string
@@ -46,6 +47,7 @@ export const PlanPricingCard = ({ plans }: PlansProps) => {
             /{month}
           </chakra.span>
         </Text>
+        <BtnHero title="Comprar" />
       </Flex>
     </Box>
   )

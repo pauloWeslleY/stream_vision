@@ -1,10 +1,10 @@
-import { ThemeConfig, extendTheme } from '@chakra-ui/react'
+import { type ThemeConfig, extendTheme } from '@chakra-ui/react'
 import colors from './colors.ts'
 
 //* Configuration Dark Mode on App
 const config: ThemeConfig = {
   initialColorMode: 'light',
-  useSystemColorMode: true,
+  useSystemColorMode: false,
 }
 
 export const theme = extendTheme({
@@ -12,7 +12,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'whiteAlpha.100',
+        bg: 'zinc.100',
         color: 'zinc.700',
         fontFamily: "'Poppins', sans-serif",
       },

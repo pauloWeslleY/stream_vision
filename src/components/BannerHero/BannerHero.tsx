@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Box, Icon, Image, chakra, useColorModeValue } from '@chakra-ui/react'
+import { Box, Icon, Image, chakra } from '@chakra-ui/react'
 
 interface BannerHeroProps {
   title: string
@@ -10,10 +10,9 @@ interface BannerHeroProps {
 
 const BannerHero = (props: BannerHeroProps) => {
   const { title, subtitle, description, imageUrl } = props
-  const bg = useColorModeValue('zinc.200', 'gray.800')
 
   return (
-    <Box pos={'relative'} overflow={'hidden'} bg={bg}>
+    <Box pos={'relative'} overflow={'hidden'} bg={'gray.800'}>
       <Box maxW={'7xl'} mx={'auto'}>
         <Box
           pos={'relative'}
@@ -21,7 +20,7 @@ const BannerHero = (props: BannerHeroProps) => {
           maxW={{ lg: '2xl' }}
           w={{ lg: 'full' }}
           zIndex={1}
-          bg={bg}
+          bg={'gray.800'}
           border={'solid 1px transparent'}
         >
           <Icon
@@ -32,7 +31,7 @@ const BannerHero = (props: BannerHeroProps) => {
             bottom={0}
             h={'full'}
             w={48}
-            color={bg}
+            color={'gray.800'}
             transform={'translateX(50%)'}
             fill={'currentColor'}
             viewBox={'0 0 100 100'}
@@ -60,7 +59,10 @@ const BannerHero = (props: BannerHeroProps) => {
                 fontWeight={'extrabold'}
                 color={'zinc.800'}
               >
-                <chakra.span display={{ base: 'block', xl: 'inline' }}>
+                <chakra.span
+                  display={{ base: 'block', xl: 'inline' }}
+                  color={'zinc.200'}
+                >
                   {title}{' '}
                 </chakra.span>
                 <chakra.span

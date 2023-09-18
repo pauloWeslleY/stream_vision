@@ -1,5 +1,5 @@
 interface CardType {
-  id?: string
+  id: string
   banner: string
 }
 

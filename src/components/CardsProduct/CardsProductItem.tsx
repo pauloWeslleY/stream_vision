@@ -6,7 +6,7 @@ interface CardsProductItemProps {
 }
 
 export const CardsProductItem = ({ card }: CardsProductItemProps) => {
-  const { banner } = card
+  const { id, banner } = card
 
   return (
     <Flex
@@ -26,7 +26,7 @@ export const CardsProductItem = ({ card }: CardsProductItemProps) => {
           transform: 'scale(1.2)',
         }}
         src={banner}
-        alt={banner}
+        alt={id}
       />
     </Flex>
   )

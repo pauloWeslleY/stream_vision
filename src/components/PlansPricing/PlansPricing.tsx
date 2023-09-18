@@ -5,7 +5,7 @@ import { PlansHeader } from './components/PlansHeader'
 
 interface PlansPricingProps {
   plansList: {
-    id?: string
+    id: string
     plan: string
     price: string
     month: string
@@ -24,7 +24,7 @@ const PlansPricing = ({ plansList }: PlansPricingProps) => {
           `}
         />
         <Box maxW={'7xl'} py={'20'} mx={'auto'}>
-          <SimpleGrid columns={[1, 3]} gap={[16, 8]}>
+          <SimpleGrid columns={[1, 3]} gap={[16, 5]}>
             {plansList.map(props => (
               <PlanPricingCard key={props.id} plans={props} />
             ))}

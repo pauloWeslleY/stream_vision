@@ -1,5 +1,5 @@
 interface SlideType {
-  id?: string
+  id: string
   imageUrl: string
 }
 
