@@ -46,7 +46,7 @@ const Contact = ({ title, content, ...props }: ContactProps) => {
                 leftIcon={<BsWhatsapp />}
                 colorScheme={'teal'}
                 variant={'solid'}
-                borderRadius={'0.9rem'}
+                borderRadius={10}
                 fontSize={'1.2rem'}
                 fontWeight={'semibold'}
                 transition={'all 0.6s ease-in-out'}
